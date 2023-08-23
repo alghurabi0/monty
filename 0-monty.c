@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
 		{"add", add},
 		{"nop", nop},
 		{"sub", sub},
-		{"div_p", div_p},
+		{"div", div_p},
 		{"mul", mul},
 		{"mod", mod},
 		{"pchar", pchar},
