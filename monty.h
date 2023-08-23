@@ -32,17 +32,7 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-/**
- * struct monty_global_data_s - global data
- * @arg: arg
- * Description: global data
- */
-typedef struct monty_global_data_s
-{
-	char *arg;
-} monty_global_data_t;
 
-extern monty_global_data_t global_data;
 
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
@@ -60,4 +50,6 @@ void pchar(stack_t **stack, unsigned int line_number);
 void pstr(stack_t **stack, unsigned int line_number);
 void rotl(stack_t **stack, unsigned int line_number);
 void rotr(stack_t **stack, unsigned int line_number);
+void clean_up(FILE *bytecode_file, char *line, stack_t *stack);
+int process(FILE *bytecode_file, instruction_t *instructions, stack_t **stack);
 #endif

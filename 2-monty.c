@@ -68,7 +68,7 @@ void pchar(stack_t **stack, unsigned int line_number)
 	free(temp);
 }
 /**
- * mod - Computes the rest of the division of the second top element by the top element.
+ * mod - Computes the rest of the division of the second top element
  * @stack: Double pointer to the head of the stack.
  * @line_number: Line number in Monty byte code file.
  */
