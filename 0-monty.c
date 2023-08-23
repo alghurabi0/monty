@@ -49,6 +49,7 @@ int process(FILE *bytecode_file, instruction_t *instructions, stack_t **stack)
 			clean_up(bytecode_file, line, *stack);
 			return (EXIT_FAILURE);
 		}
+		found = 0;
 	}
 	clean_up(bytecode_file, line, *stack);
 	return (EXIT_SUCCESS);
