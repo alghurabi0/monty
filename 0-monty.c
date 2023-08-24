@@ -33,7 +33,7 @@ int process(FILE *bytecode_file, instruction_t *instructions, stack_t **stack)
 	{
 		line_number++;
 		opcode = strtok(line, " \t\n");
-		if (opcode == NULL || strncmp(opcode, "#", 1) == 0)
+		if (opcode == NULL || opcode[0] == '#')
 			continue;
 		global_data.arg = strtok(NULL, " \t\n");
 		for (i = 0; instructions[i].opcode != NULL; i++)
